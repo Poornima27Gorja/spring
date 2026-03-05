@@ -16,7 +16,8 @@ public class EmployeeService {
 	@Autowired
 	private EmployeeRepository emprepo;
 	
-	public EmployeeDTO saveEmployee(Employee emp) {
+	public EmployeeDTO saveEmployee(EmployeeDTO empdto) {
+		Employee emp = DTOtoEmp(empdto);
 		return empToDTO(emprepo.save(emp));
 	}
 	

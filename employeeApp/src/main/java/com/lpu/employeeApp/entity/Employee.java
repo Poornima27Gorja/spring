@@ -1,5 +1,7 @@
 package com.lpu.employeeApp.entity;
 
+import java.io.Serializable;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Entity;
@@ -8,30 +10,33 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Positive;
+//import jakarta.validation.constraints.Email;
+//import jakarta.validation.constraints.Max;
+//import jakarta.validation.constraints.Min;
+//import jakarta.validation.constraints.NotBlank;
+//import jakarta.validation.constraints.Pattern;
 
 @Entity
-public class Employee {
+public class Employee implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@NotBlank(message = "name should not be blank")
+//	@NotBlank(message = "name should not be blank")
 	private String name;
-	@Positive(message = "phone number should be positive")
-	@Pattern(regexp = "[7-9][0-9]{9}", message = "Phone must be 10 digits starting with 7,8,9")
+//	@Pattern(regexp = "[7-9][0-9]{9}", message = "Phone must be 10 digits starting with 7,8,9")
 	private String phone;
-	@NotBlank(message = "email should not be blank")
-	@Email(message = "email should be valid")
-	@Pattern(regexp = "[a-z]{2,}@[a-z]{2,}\\.[a-z]{2,3}")
+//	@NotBlank(message = "email should not be blank")
+//	@Email(message = "email should be valid")
+//	@Pattern(regexp = "[a-z]{2,}@[a-z]{2,}\\.[a-z]{2,3}")
 	private String email;
-	@Min(value = 18, message = "Age must be above 18")
-	@Max(value = 60, message = "Age must be below 60")
+//	@Min(value = 18, message = "Age must be above 18")
+//	@Max(value = 60, message = "Age must be below 60")
 	private int age;
 	
 	@ManyToOne
