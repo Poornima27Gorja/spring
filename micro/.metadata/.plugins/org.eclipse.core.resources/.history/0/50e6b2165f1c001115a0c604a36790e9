@@ -1,0 +1,34 @@
+package com.lpu.users.controller;
+
+import java.util.List;
+import org.springframework.web.bind.annotation.*;
+import com.lpu.users.entity.Users;
+import com.lpu.users.service.UserService;
+
+@RestController
+@RequestMapping("/users")
+public class UserController {
+
+    private final UserService service;
+
+    public UserController(UserService service) {
+        this.service = service;
+    }
+
+    @PostMapping("/save")
+    public Users create(@RequestBody Users user) {
+        return service.save(user);
+    }
+
+    @GetMapping("/get")
+    public List<Users> getAll() {
+        return service.getAll();
+    }
+
+    @GetMapping("/get/{id}")
+    public Users get(@PathVariable Long id) {
+        return service.getById(id);
+    }
+
+   
+}

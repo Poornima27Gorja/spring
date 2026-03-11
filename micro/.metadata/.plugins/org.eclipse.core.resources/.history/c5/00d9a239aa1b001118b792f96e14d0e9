@@ -1,0 +1,23 @@
+spring.application.name=api_gateway
+
+server.port=8888
+
+# USER SERVICE
+spring.cloud.gateway.routes[0].id=user-service
+spring.cloud.gateway.routes[0].uri=http://localhost:8081
+spring.cloud.gateway.routes[0].predicates[0]=Path=/gateway/users/**
+spring.cloud.gateway.routes[0].filters[0]=StripPrefix=1
+
+
+
+# PRODUCT SERVICE
+spring.cloud.gateway.routes[1].id=product-service
+spring.cloud.gateway.routes[1].uri=http://localhost:8082
+spring.cloud.gateway.routes[1].predicates[0]=Path=/gateway/products/**
+spring.cloud.gateway.routes[1].filters[0]=StripPrefix=1
+
+# PAYMENT SERVICE
+spring.cloud.gateway.routes[2].id=payment-service
+spring.cloud.gateway.routes[2].uri=http://localhost:8083
+spring.cloud.gateway.routes[2].predicates[0]=Path=/gateway/payments/**
+spring.cloud.gateway.routes[2].filters[0]=StripPrefix=1

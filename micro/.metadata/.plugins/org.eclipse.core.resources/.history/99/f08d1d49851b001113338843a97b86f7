@@ -1,0 +1,5 @@
+package com.lpu.payment.controller;
+
+public class PaymentController {
+
+}

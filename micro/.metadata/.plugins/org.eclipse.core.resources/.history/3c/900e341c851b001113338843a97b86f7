@@ -1,0 +1,5 @@
+package com.lpu.payment.repository;
+
+public class UserRepo {
+
+}

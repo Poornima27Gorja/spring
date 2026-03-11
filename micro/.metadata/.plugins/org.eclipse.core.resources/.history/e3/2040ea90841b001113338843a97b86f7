@@ -1,0 +1,5 @@
+package com.lpu.product.entity;
+
+public class Product {
+
+}

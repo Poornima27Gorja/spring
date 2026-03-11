@@ -1,0 +1,98 @@
+0:17:51 Memory Pressure: Moderate
+0:17:56 Memory Pressure: None
+0:18:46 Memory Pressure: Moderate
+0:18:50 Tab19 StartNav59 #typed
+0:18:50 Tab19 FinishNav59
+0:18:50 Tab19 PageLoad
+0:18:51 Memory Pressure: None
+0:19:51 Memory Pressure: Moderate
+0:20:01 Memory Pressure: Moderate
+0:20:11 Memory Pressure: None
+0:20:21 Memory Pressure: Moderate
+0:20:31 Memory Pressure: Moderate
+0:20:41 Memory Pressure: Moderate
+0:20:51 Memory Pressure: Moderate
+0:21:01 Memory Pressure: Moderate
+0:21:12 Memory Pressure: Moderate
+0:21:22 Memory Pressure: Moderate
+0:21:32 Memory Pressure: Moderate
+0:21:42 Memory Pressure: Moderate
+0:21:52 Memory Pressure: Moderate
+0:22:02 Memory Pressure: Moderate
+0:22:12 Memory Pressure: Moderate
+0:22:22 Memory Pressure: Moderate
+0:22:32 Memory Pressure: Moderate
+0:22:37 Memory Pressure: None
+0:23:32 Memory Pressure: Moderate
+0:23:37 Memory Pressure: None
+0:25:27 Memory Pressure: Moderate
+0:25:37 Memory Pressure: Moderate
+0:25:47 Memory Pressure: Moderate
+0:25:57 Memory Pressure: Moderate
+0:26:07 Memory Pressure: Moderate
+0:26:12 Memory Pressure: None
+0:26:17 Memory Pressure: Moderate
+0:26:27 Memory Pressure: Moderate
+0:26:37 Memory Pressure: Moderate
+0:26:42 Memory Pressure: None
+0:27:22 Memory Pressure: Moderate
+0:27:32 Memory Pressure: Moderate
+0:27:42 Memory Pressure: None
+0:28:48 Tab19 StartNav60 #typed
+0:28:48 Tab19 FinishNav60
+0:28:48 Tab19 PageLoad
+0:29:47 Memory Pressure: Moderate
+0:29:52 Memory Pressure: None
+0:31:03 Memory Pressure: Moderate
+0:31:13 Memory Pressure: Moderate
+0:31:23 Memory Pressure: Moderate
+0:31:33 Memory Pressure: Moderate
+0:31:38 Tab19 StartNav61 #typed
+0:31:38 Tab19 FinishNav61
+0:31:38 Tab19 PageLoad
+0:31:43 Memory Pressure: Moderate
+0:31:53 Memory Pressure: Moderate
+0:32:03 Memory Pressure: Moderate
+0:32:13 Memory Pressure: Moderate
+0:32:23 Memory Pressure: Moderate
+0:32:33 Memory Pressure: Moderate
+0:32:43 Memory Pressure: Moderate
+0:32:53 Memory Pressure: Moderate
+0:33:03 Memory Pressure: Moderate
+0:33:08 Memory Pressure: None
+0:33:23 Microsoft.Shutdown.TabStripModel.SendDetachWebContentsNotifications
+0:33:24 Browser2 Close Tab2 at 0
+0:33:24 Tab2 WebContentsDestroyed
+0:33:25 Microsoft.UnloadController.TabStripEmpty
+0:33:25 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+0:33:25 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:33:25 Microsoft.Shutdown.OnWindowClosing
+0:33:25 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+0:33:25 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:33:25 Microsoft.Shutdown.OnWindowClosing_MaybeClearBrowsingDataOnExit
+0:33:25 Microsoft.Shutdown.OnWindowClosing_ClearBrowsingDataOnExitNotInProgress
+0:33:25 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+0:33:25 Widget Closed: BrowserWidget
+0:33:25 Microsoft.Browser_Removed
+0:33:25 Microsoft.Shutdown.TabStripModel.SendDetachWebContentsNotifications
+0:33:25 Browser19 Close Tab19 at 0
+0:33:25 Tab19 WebContentsDestroyed
+0:33:26 Microsoft.UnloadController.TabStripEmpty
+0:33:26 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+0:33:26 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:33:26 Microsoft.Shutdown.OnWindowClosing
+0:33:26 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+0:33:26 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:33:26 Microsoft.Shutdown.OnWindowClosing_MaybeClearBrowsingDataOnExit
+0:33:26 Microsoft.Shutdown.OnWindowClosing_ClearBrowsingDataOnExitNotInProgress
+0:33:26 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+0:33:26 Widget Closed: BrowserWidget
+0:33:26 Microsoft.Last_Browser_Removed
+0:33:26 Microsoft.Shutdown.ShutdownIfNoBrowsers
+0:33:26 Microsoft.Shutdown.SetTryingToQuit_Quitting
+0:33:26 Microsoft.Shutdown.NotifyAppTerminating
+0:33:26 Microsoft.Shutdown.OnAppExiting
+0:33:26 Microsoft.Shutdown.HandleAppExitingForPlatform_Aura
+0:33:26 Microsoft.Shutdown.HandleAppExitingForPlatform_Aura.NotificationUIManager_StartShutdown
+0:33:26 Microsoft.Shutdown.HandleAppExitingForPlatform_Aura.CloseAllSecondaryWidgets
+0:33:26 Shutdown
