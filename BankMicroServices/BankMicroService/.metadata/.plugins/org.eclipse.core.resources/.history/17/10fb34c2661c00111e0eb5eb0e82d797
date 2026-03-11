@@ -1,0 +1,5 @@
+package com.lpu.loan.repository;
+
+public class LoanRepository {
+
+}

@@ -1,0 +1,5 @@
+package com.lpu.deposit.repository;
+
+public class DepositRepository {
+
+}

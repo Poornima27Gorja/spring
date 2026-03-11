@@ -1,0 +1,5 @@
+package com.lpu.deposit.entity;
+
+public class Deposit {
+
+}

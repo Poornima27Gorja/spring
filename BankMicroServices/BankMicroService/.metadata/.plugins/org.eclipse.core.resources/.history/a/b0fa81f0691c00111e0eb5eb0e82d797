@@ -1,0 +1,41 @@
+package com.lpu.loan.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Loan {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int loadId;
+	
+	private String loanType;
+	private double loanAmount;
+	
+	public int getLoadId() {
+		return loadId;
+	}
+	
+	public void setLoadId(int loadId) {
+		this.loadId = loadId;
+	}
+	
+	public double getLoanAmount() {
+		return loanAmount;
+	}
+	
+	public void setLoanName(double loanAmount) {
+		this.loanAmount = loanAmount;
+	}
+	
+	public String getLoanType() {
+		return loanType;
+	}
+	
+	public void setLoanType(String loanType) {
+		this.loanType = loanType;
+	}
+}

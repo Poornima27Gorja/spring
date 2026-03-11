@@ -1,0 +1,41 @@
+package com.lpu.loan.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lpu.loan.entity.Loan;
+import com.lpu.loan.repository.LoanRepository;
+
+@Service
+public class LoanService {
+
+	@Autowired
+	private LoanRepository repository;
+	
+	public Loan addLoan(Loan loan) {
+		return repository.save(loan);
+	}
+	
+	public Loan findLoan(int id) {
+		return repository.findById(id).orElse(null);
+	}
+	
+	 public List<Loan> findLoans() {
+		 return repository.findAll();
+	 }
+	 
+	 public Loan updateLoan(int id, Loan loan) {
+		 Loan l = repository.findById(id).orElse(null);
+		 
+		 l.setLoanName(loan.getLoanName());
+		 l.setLoanType(loan.getLoanType());
+		 
+		 return repository.save(l);
+	 }
+	 
+	 public void deleteLoan(int id) {
+		 repository.deleteById(id);
+	 }
+}

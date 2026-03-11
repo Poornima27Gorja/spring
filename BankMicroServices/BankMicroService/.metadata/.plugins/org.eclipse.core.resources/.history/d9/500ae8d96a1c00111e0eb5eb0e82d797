@@ -1,0 +1,5 @@
+package com.lpu.deposit.service;
+
+public class DepositService {
+
+}

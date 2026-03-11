@@ -1,0 +1,9 @@
+spring.application.name=bank-service-registery
+
+server.port=8761
+
+server.servlet.context-path=/registery
+
+# To remove self registration of eureka server
+eureka.client.fetch-registry=false
+eureka.client.register-with-eureka=false

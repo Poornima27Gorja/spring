@@ -1,0 +1,5 @@
+package com.lpu.loan.entity;
+
+public class Loan {
+
+}

@@ -1,0 +1,7 @@
+spring.application.name=profileDemo
+
+server.port=8080
+
+user.name = udaya
+
+#spring.profiles.active=dev
