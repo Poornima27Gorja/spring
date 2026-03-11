@@ -1,0 +1,20 @@
+package com.lpu.loan.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/loan")
+public class LoanController {
+	@GetMapping("/save")
+	public String save() {
+		return "loan saved";
+	}
+	
+	@GetMapping("/get")
+	public String get() {
+		return "u get it";
+	}
+	
+}

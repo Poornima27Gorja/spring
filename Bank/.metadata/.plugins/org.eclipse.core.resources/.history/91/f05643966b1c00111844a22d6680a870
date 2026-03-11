@@ -1,0 +1,5 @@
+package com.lpu.account.entity;
+
+public class Account {
+
+}
