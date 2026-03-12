@@ -1,0 +1,5 @@
+package com.lpu.products.repository;
+
+public class ProductRepository {
+
+}

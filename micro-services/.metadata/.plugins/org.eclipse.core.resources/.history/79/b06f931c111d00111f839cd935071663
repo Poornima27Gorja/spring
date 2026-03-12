@@ -1,0 +1,27 @@
+package com.lpu.bank_profileDemo;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+//@Profile("dev")
+@RestController
+public class DevController {
+
+	@Value("${server.port")
+	private String port;
+	@Value("${server.name2")
+	private String name2;
+	
+	@GetMapping("/rt")
+	public ResponseEntity<String> takeDataFromUserService() {
+		String url = "http://localhost:8081/user/data";
+		RestTemplate template = new RestTemplate();
+		ResponseEntity<String> response = template.exchange(url, HttpMethod.GET, null, String.class);
+		return response;
+	}
+}

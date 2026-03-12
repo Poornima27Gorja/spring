@@ -1,0 +1,13 @@
+package com.lpu.users.service;
+@FeignClient(name = "products", path = "/product")
+public interface ProductFeignClient {
+	
+//	@GetMapping("/get-product")
+//	public String getProducts();
+	
+	@GetMapping("/find/{productId}")
+	public Product findProduct(@PathVariable int productId);
+
+	
+}
+

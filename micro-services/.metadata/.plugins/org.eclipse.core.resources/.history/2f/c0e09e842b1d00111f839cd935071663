@@ -1,0 +1,63 @@
+package com.lpu.users.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.lpu.users.entity.Users;
+import com.lpu.users.service.ProductFeignClient;
+import com.lpu.users.service.UserService;
+
+@RequestMapping("/user")
+@RestController
+public class UserController {
+
+	@Autowired
+	private UserService service;
+	
+	@Autowired
+	private ProductFeignClient productService;
+	
+	@GetMapping("/products")
+	public String getProductInUser() {
+		return productService.getProducts();
+	}
+	
+	@PostMapping("/save")
+	public Users saveUser(@RequestBody Users user) {
+		return service.saveUser(user);
+	}
+	
+	@GetMapping("/find/{id}")
+	public Users findUser(@PathVariable int id) {
+		return service.findUserById(id);
+	}
+	
+	@GetMapping("/findAll")
+	public List<Users> findAll() {
+		return service.findAllUsers();
+	}
+	
+	@PutMapping("/update/{id}")
+	public Users updateUser(@PathVariable int id, @RequestBody Users user) {
+		return service.updateUserById(id, user);
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public void deleteUser(@PathVariable int id) {
+		service.deleteUserById(id);
+	}
+	
+	@GetMapping("/data")
+	public String printData() {
+		return "Data";
+	}
+}

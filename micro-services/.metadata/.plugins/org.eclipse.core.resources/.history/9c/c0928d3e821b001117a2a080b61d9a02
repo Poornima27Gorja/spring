@@ -1,0 +1,5 @@
+package com.lpu.users.repository;
+
+public class UserRepository {
+
+}

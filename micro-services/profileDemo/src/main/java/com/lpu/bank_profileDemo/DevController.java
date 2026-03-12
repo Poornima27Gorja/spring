@@ -1,0 +1,65 @@
+package com.lpu.bank_profileDemo;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+
+
+//@Profile("dev")
+@RestController
+public class DevController {
+		RestTemplate template = new RestTemplate();
+
+	@Value("${server.port")
+	private String port;
+	@Value("${server.name2")
+	private String name2;
+	
+	@GetMapping("/rt")
+	public ResponseEntity<String> takeDataFromUserService() {
+		String url = "http://localhost:8081/user/data";
+		ResponseEntity<String> response = template.exchange(url, HttpMethod.GET, null, String.class);
+		return response;
+	}
+	
+	@GetMapping("/findpayment/{paymentId}")
+	public ResponseEntity<String> findPaymentById(@PathVariable int paymentId) {
+		String url = "http://localhost:8083/payment/find/{paymentId}";
+		RestTemplate template = new RestTemplate();
+		ResponseEntity<String> response = template.exchange(url, HttpMethod.GET, null, String.class, paymentId);
+		return response;
+	}
+
+	@GetMapping("/findall")
+	public ResponseEntity<String> findAllProducts() {
+		String url = "http://localhost:8082/product/findAll";
+		RestTemplate template = new RestTemplate();
+		ResponseEntity<String> response = template.exchange(url, HttpMethod.GET, null, String.class);
+		return response;
+	}
+	
+	@PostMapping("/saveuser")
+	public ResponseEntity<String> saveUser(@RequestBody Users user) {
+		String url = "http://localhost:8081/user/save";
+		RestTemplate template = new RestTemplate();
+		
+		HttpHeaders headers = new HttpHeaders();
+	    headers.setContentType(MediaType.APPLICATION_JSON);
+
+	    HttpEntity<Users> entity = new HttpEntity<>(user, headers);
+	    
+		ResponseEntity<String> response = template.exchange(url, HttpMethod.POST, entity, String.class, user);
+		return response;
+	}
+}

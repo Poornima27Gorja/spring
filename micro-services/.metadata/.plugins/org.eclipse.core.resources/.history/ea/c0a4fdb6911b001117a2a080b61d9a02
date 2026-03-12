@@ -1,0 +1,46 @@
+package com.lpu.payments.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.lpu.payments.entity.Payment;
+import com.lpu.payments.service.PaymentService;
+
+@RestController
+public class PaymentController {
+
+	@Autowired
+	private PaymentService service;
+	
+	@PostMapping("/save")
+	public Payment savePayment(Payment payment) {
+		return service.savePayment(payment);
+	}
+	
+	@GetMapping("/find")
+	public Payment findPayment(int paymentId) {
+		return service.findPaymentById(paymentId);
+	}
+	
+	@GetMapping("/findAll")
+	public List<Payment> findAll() {
+		return service.findAllPayments();
+	}
+	
+	@PutMapping("/update")
+	public Payment updatePayment(int paymentId,Payment payment) {
+		return service.updatePaymentById(paymentId, payment);
+	}
+	
+	@DeleteMapping("/delete")
+	public void deletePayment(int paymentId) {
+		service.deletePaymentById(paymentId);
+	}
+	
+}

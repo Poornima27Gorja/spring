@@ -14,7 +14,14 @@ public class UserController {
     public UserController(UserService service) {
         this.service = service;
     }
-
+    
+   
+    @GetMapping("/data")
+    public String SaveUser() {
+    	return"save this data of user";
+    }
+    
+    
     @PostMapping("/save")
     public Users create(@RequestBody Users user) {
         return service.save(user);
@@ -23,12 +30,12 @@ public class UserController {
     @GetMapping("/get")
     public List<Users> getAll() {
         return service.getAll();
-    }
+    } 
 
     @GetMapping("/get/{id}")
     public Users get(@PathVariable Long id) {
         return service.getById(id);
     }
+    
 
-   
 }

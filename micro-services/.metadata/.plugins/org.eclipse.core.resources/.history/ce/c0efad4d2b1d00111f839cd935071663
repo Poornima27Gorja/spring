@@ -1,0 +1,21 @@
+package com.lpu.users.service;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.lpu.users.entity.Product;
+
+
+
+
+@FeignClient(name = "products", path = "/product")
+public interface ProductFeignClient {
+	
+	@GetMapping("/get-product")
+	public String getProducts();
+	
+	@GetMapping("/find/{productId}")
+	public Product findProduct(@PathVariable int id)
+
+}

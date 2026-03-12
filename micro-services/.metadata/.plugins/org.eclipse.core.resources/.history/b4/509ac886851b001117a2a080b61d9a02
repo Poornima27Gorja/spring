@@ -1,0 +1,5 @@
+package com.lpu.payments.service;
+
+public class PaymentService {
+
+}
